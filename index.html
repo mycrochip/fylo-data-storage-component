@@ -5,27 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="css/index.css"> <!--Home Page stylesheet-->
   
   <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <header class="header box-shadow">
+    <h1 class="sr-only">Fylo Data Storage Component</h1>
 
-  You’ve used 815 GB of your storage
+    <img class="logo" src="images/logo.svg" alt="Fylo Logo">
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <ul class="links">
+      <li class="link__wrapper">
+        <a class="link__icon--document" href="#">
+          <img src="images/icon-document.svg" alt="Document">
+        </a>
+      </li>
+      
+      <li class="link__wrapper">
+        <a class="link__icon--folder" href="#">
+          <img src="images/icon-folder.svg" alt="Folder">
+        </a>
+      </li>
+
+      <li class="link__wrapper">
+        <a class="link__icon--upload" href="#">
+          <img src="images/icon-upload.svg" alt="Upload">
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main class="main-wrapper">
+    <section class="storage-notification box-shadow">
+      <h2 class="notification__text">You&apos;ve used <span class="value-used">815 GB</span> of your storage</h2>
+
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+
+      <div class="storage__limit">
+        <p class="lower-limit">0 GB</p>
+        <p class="upper-limit">1000 GB</p>
+      </div>
+
+      <!-- ::after -->
+      <div class="storage__remain box-shadow"><span class="value">185 </span>GB Left</div>
+    </section>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a> 
+    Coded by <a href="https://www.frontendmentor.io/profile/mycrochip">mycrochip</a>.
+  </footer>
 </body>
 </html>
